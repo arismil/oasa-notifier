@@ -1,0 +1,20 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "oasa-notifier"
+version = "0.1.0"
+description = "notify bus status"
+authors = ["Aris Miletis"]
+license = "None"
+readme = "README.md"
+packages = [{include = "oasa_notifier"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.4"
+djangorestframework = "^3.14.0"
+celery = {extras = ["redis"], version = "^5.2.7"}
+black = "^22.12.0"
+pre-commit = "^2.20.0"
