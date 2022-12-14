@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from notifier.viber.views import message
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", message),
 ]
